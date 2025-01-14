@@ -1,7 +1,7 @@
 <?php
 session_start();
 $notification = $_SESSION['notification'] ?? null;
-if (notification) {
+if ($notification) {
   unset($_SESSION['notification']);
 }
 

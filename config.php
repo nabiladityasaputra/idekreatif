@@ -12,9 +12,8 @@ $conn = mysqli_connect($host,$username,$password,$database);
 // mengecek apakah koneksi berhasil
 if ($conn->connect_eror){
     //menampilkan pesan eror jika koneksi gagal
-    die ("database gagal terkoneksi: ". $conn->connect_eror);
+    die ("database gagal terkoneksi: " . $conn->connect_eror);
+}
 
     //jika koneksi berhasil script akan jalan tanpa pesan eror
-
-}
 ?>
