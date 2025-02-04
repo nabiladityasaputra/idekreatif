@@ -1,8 +1,8 @@
 <?php
-include('./includes/header.php');
+include('.includes/header.php');
 $title = "Dashboard";
 // Menyertakan file untuk menampilkan notifikasi (jika ada)
-include('./includes/toast_notification.php');
+include('.includes/toast_notification.php');
 ?>
 
 <div class="container-xxl flex-grow-1 container-p-y">
@@ -29,7 +29,7 @@ include('./includes/toast_notification.php');
             // Menampilkan data dari tabel database
             $query = "SELECT posts.*, users.name as user_name, categories.category_name FROM posts 
                       INNER JOIN users ON posts.user_id = users.user_id
-                      INNER JOIN categories ON posts.category_id = categories.category_id
+                      INNER JOIN categories ON posts.categori_id = categories.category_id
                       WHERE posts.user_id = $userId";
             $exec = mysqli_query($conn, $query);
             $no = 1;
@@ -37,7 +37,7 @@ include('./includes/toast_notification.php');
             ?>
               <tr>
                 <td><?= $no++; ?></td>
-                <td><?= $post['title']; ?></td>
+                <td><?= $post['post_title']; ?></td>
                 <td><?= $post['user_name']; ?></td>
                 <td><?= $post['category_name']; ?></td>
                 <td>
@@ -82,4 +82,5 @@ include('./includes/toast_notification.php');
     </div>
   </div>
 </div>
-<?php include('./includes/footer.php'); ?>
+<?php include('.includes/footer.php');
+?>

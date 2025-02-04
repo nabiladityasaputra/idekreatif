@@ -21,8 +21,8 @@ include '.includes/header.php';
                         </div>
                         <!-- Dropdown untuk memilih kategori -->
                         <div class="mb-3">
-                            <label for="category_id" class="form-label">Kategori</label>
-                            <select class="form-select" name="category_id" required>
+                            <label for="categori_id" class="form-label">Kategori</label>
+                            <select class="form-select" name="categori_id" required>
                                 <option value="" selected disabled>Pilih salah satu</option>
                                 <?php
                                 $query = "SELECT * FROM categories";
